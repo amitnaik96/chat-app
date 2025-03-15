@@ -13,10 +13,10 @@ wss.on('connection', function connection(ws) {
             if (message.type === 'join') {
                 const room = message.room;
                 r.addWs(room, ws);
-                console.log("user joined", room);
+                // console.log("user joined", room);
             }
             else if (message.type === 'message') {
-                console.log(message);
+                // console.log(message);
                 const room = message.room;
                 const name = message.name;
                 if (!room || !r.rooms.has(room))
