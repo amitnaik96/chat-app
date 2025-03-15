@@ -19,8 +19,7 @@ A simple real-time chat application built to understand websockets.
 
 ### **WebSocket Server**
 ```bash
-    # clone the repo
-    git clone https://github.com/amitnaik96/chat-app.git
+    # in seprate terminal
     cd chat-app/server
 
    # install dependencies
