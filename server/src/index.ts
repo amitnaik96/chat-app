@@ -1,4 +1,4 @@
-import { WebSocketServer } from 'ws';
+import { WebSocketServer, WebSocket } from 'ws';
 import { RoomsManager } from './store';
 
 const PORT = Number(process.env.PORT) || 8081;
@@ -6,7 +6,7 @@ const wss = new WebSocketServer({ port : PORT});
 
 const r = RoomsManager.getInstance();
 
-wss.on('connection', function connection(ws) {
+wss.on('connection', function connection(ws: WebSocket) {
     ws.on('error', console.error);
 
     ws.on('message', function (data: any) {
