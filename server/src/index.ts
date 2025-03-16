@@ -1,7 +1,8 @@
 import { WebSocketServer } from 'ws';
 import { RoomsManager } from './store';
 
-const wss = new WebSocketServer({ port : 8081});
+const PORT = Number(process.env.PORT) || 8081;
+const wss = new WebSocketServer({ port : PORT});
 
 const r = RoomsManager.getInstance();
 
