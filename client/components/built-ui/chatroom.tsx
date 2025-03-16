@@ -23,8 +23,8 @@ export const ChatRoom = () => {
     const [ chats, setChats ] = useState<ChatProp[]>([]);
     const [ message, setMessage ] = useState('');
     const name = useAtomValue(nameAtom);
-    const URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8081';
     useEffect(() => {
+        const URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:8081';
         const socket = new WebSocket(URL);
 
         socket.onopen = () => {
