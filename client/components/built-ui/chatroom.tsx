@@ -55,8 +55,14 @@ export const ChatRoom = () => {
     };
 
     function sendMessage(){
+        if(socket === null){
+            toast('backend down');
+            return;
+        }
+
         if(message === '') {
             toast("Please enter some message.");
+            return;
         };
 
         socket?.send(JSON.stringify({type:'message', room: room, chat: message, name: name, time: getTime()}));
