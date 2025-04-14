@@ -2,6 +2,9 @@
 
 A simple real-time chat application built to understand websockets.
 
+## **Architecture**
+![Architecture](https://raw.githubusercontent.com/amitnaik96/chat-app/master/client/public/build.png)
+
 ## **Installation**
 
 ### **Client**
